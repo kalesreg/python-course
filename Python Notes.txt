@@ -1,0 +1,37 @@
+# Python Notes
+
+## Data Types
+
+### Strings
+
+"This is a character string" 
+# A string is surrounded by either double or single quotes
+
+'It\'s important to understand escape characters' 
+# \ is the escape character, which can also be used to split a line of code
+
+'Hello World!\n\n My name is Kaley.' # \n prints a new line in the console
+
+### Integers
+
+int() # Saves value as an integer
+
+### Floats
+
+float() # Saves value as an integer
+
+## Math
+
+* # Star is used for multiplication
+/ # Forward slash is used for division
++ # Plus sign is used for addition
+- # Dash is used for subtraction
+// # Two forward slashes are used for floor division
+% # Modulus is used for finding the remainder
+
+## Functions
+
+print() # Prints arguments to console, use commas to concatenate 
+input() # Accepts user input from the console based on a prompt
+.upper() # Makes the string variable uppercase
+format() # Used to format the different data types a specified way
