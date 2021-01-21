@@ -72,14 +72,16 @@ if military_status == "Y":
 else:
     military_discount_amount = 0
 
-ticket_price_after_discount = ticket_price_before_discount - military_discount_amount
+ticket_price_after_discount = ticket_price_before_discount - \
+    military_discount_amount
 
 # display results
 print("Ticket Price for", name)
 print("Age:", format(age, ',d')) # d means age is an integer
 print("Seat Chosen:", seat_description)
-print("Ticket Price Before Discount:", format(ticket_price_before_discount, \
-                                              ',.2f'))
+print("Ticket Price Before Discount:", \
+      format(ticket_price_before_discount, ',.2f'))
 print("Military Discount:", format(military_discount_amount, ',.2f'))
-print("Ticket Price After Discount:", format(ticket_price_after_discount, \
-                                             ',.2f'))
+print("Ticket Price After Discount:", format(ticket_price_after_discount, ',.2f'))
+
+print("GO NATS!")
