@@ -5,29 +5,96 @@
 ### Strings
 
 "This is a character string" 
-# A string is surrounded by either double or single quotes
+A string is surrounded by either double or single quotes.
+
+str() # Converts and saves value as a string
 
 'It\'s important to understand escape characters' 
-# \ is the escape character, which can also be used to split a line of code
+\ is the escape character, which can also be used to split a line of code
 
-'Hello World!\n\n My name is Kaley.' # \n prints a new line in the console
+a = 'Hello World!\n\n My name is Kaley.' 
+Assign a string to a variable with an equal sign.
+\n prints a new line in the console
+
+Assign a multiline string to a variable by using three quotes.
+
+Strings are arrays, so can use square brackets to access elements of the string
+or loop through the string with for loop.
+
+len() # Returns length of a string
+
+'free' in txt # Use in to check if a certain phrase or character is present in a string
+'free' not in txt # Use not in to check if a certain phrase of character is not present
 
 ### Integers
 
-int() # Saves value as an integer
+Integer or Int is a whole number, positive or negative, without decimals.
+
+int() # Converts and saves value as an integer
 
 ### Floats
 
-float() # Saves value as an integer
+Float is a number, positive or negative, containing one or more decimals.
+Can also be scientific numbers with an e to indicate the power of 10.
+
+float() # Converts and saves value as an integer
+
+### Complex Numbers
+
+Complex numbers are written with a j as the imaginary part.
+
+### Booleans
+
+True or False, used to compare values
+
+bool() # Evaluate any value, any string is true except empty strings, any number
+is true except 0, any list, tuple, set, and dictionary are true except empty ones
 
 ## Math
 
+** # Exponent operator
 * # Star is used for multiplication
-/ # Forward slash is used for division
+/ # Forward slash is used for floating point division
+// # Two forward slashes are used for floor division or integer division
+% # Modulus is used for finding the remainder
 + # Plus sign is used for addition
 - # Dash is used for subtraction
-// # Two forward slashes are used for floor division
-% # Modulus is used for finding the remainder
+
+## Conditions and If Statements
+
+a == b # Equals
+a != b # Not Equals
+a < b # Less Than
+a <= b # Less than or equal to
+a > b # Greater than
+a >= b # Greater than or equal to
+
+if b > a: 
+    print("b is greater than a")
+This is an if statement.
+
+if b > a: 
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+The elif keyword is else if, aka if previous condition is false, then try this.
+
+if b > a: 
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+if a > b and c > a:
+    print("Both conditions are True")
+The and keyword is a logical operator and is used to combine conditional statements.
+Th eor keyword is another logical operator.
+
+If statements can be nested inside other if statements.
+
+Pass statement can be used for empty if statements to avoid getting an error.
 
 ## Functions
 
