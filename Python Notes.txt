@@ -96,9 +96,15 @@ If statements can be nested inside other if statements.
 
 Pass statement can be used for empty if statements to avoid getting an error.
 
+## Loops
+
+while is_valid == False: 
+This is a while loop.
+
 ## Functions
 
 print() # Prints arguments to console, use commas to concatenate 
 input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
 format() # Used to format the different data types a specified way
+import # Used to import packages
