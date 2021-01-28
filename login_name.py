@@ -57,18 +57,38 @@ while is_valid == False:
     # Check the length
     if len(password) >= 8:
         correct_length = True
-        print("Your password has 8 characters.")
     else:
         correct_length = False
-        print("Your password does not have 8 characters")
     
-    if correct_length:
+    check_uppercase = False
+    check_lowercase = False
+    check_number = False
+    
+    for ch in password:
+        # check for uppercase
+        if ch.isupper():
+            check_uppercase = True
+
+        if ch.islower():
+            check_lowercase = True
+            
+        if ch.isdigit():
+            check_number = True
+    
+    if correct_length and check_uppercase and check_lowercase and check_number:
         print("The password is valid")
         is_valid = True
     else:
         print("The password is invalid")
         is_valid = False
-        
+        if correct_length == False:
+            print("Your password does not have at least 8 characters.")
+        if check_uppercase == False:
+            print("Your password does not have an uppercase letter.")
+        if check_lowercase == False:
+            print("Your password does not have a lowercase letter.")
+        if check_number == False:
+            print("Your password does not have a number.")
         # re-enter the password
         print("Please enter your password:")
         print("It must contain at least 8 characters")
