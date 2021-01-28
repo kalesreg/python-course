@@ -18,13 +18,71 @@ Assign a string to a variable with an equal sign.
 
 Assign a multiline string to a variable by using three quotes.
 
+string[0:1] # Returns 1st letter
 Strings are arrays, so can use square brackets to access elements of the string
 or loop through the string with for loop.
 
 len() # Returns length of a string
 
-'free' in txt # Use in to check if a certain phrase or character is present in a string
-'free' not in txt # Use not in to check if a certain phrase of character is not present
+'free' in txt # Use *in* to check if a certain phrase or character is present in a string
+'free' not in txt # Use *not in* to check if a certain phrase of character is not presen
+
+capitalize() # Converts the first character to upper case
+casefold() # Converts string into lower case
+lower() # Converts a string into lower case
+swapcase() # Swaps cases, lower case becomes upper and vice versa
+title() # Converts the first character of each word to upper case
+upper() # Converts a string into upper case
+
+center() # Returns a centered string
+ljust() # Returns a left justified version of the string
+rjust() # Returns a right justified version of the string
+
+count() # Returns the number of times a specified value occurs in a string
+endswith() # Returns true if the string ends with the specified value
+find() # Searches the string for specified value and returns the position
+index() # Searches the string for a specified value and returns the position
+rfind() # Searches the string for a specified value and returns last position
+rindex() # Searches the string for a specified value and returns last position
+startswith() # Returns true if the string starts with the specified value
+
+encode() # Returns an encoded version of the string
+
+expandtabs() # Sets the tab size of the string
+
+format() # Formats specified values in a string
+format_map() # Formats specified values in a string
+
+isalnum() # Returns True if all characters in the string are alphanumeric
+isalpha() # Returns True if all characters in the string are in the alphabet
+isdecimal() # Returns if all characters in the string are decimals
+isdigit() # Returns True if all characters in the string are digits
+isidentifier() # Returns True if the string is an identifier
+islower() # Returns if all characters in the string are lower case
+isnumeric() # Returns True if all characters in the string are numeric
+isprintable() # Returns True if all characters in the string are printable
+isspace() # Returns True if all characters in the string are whitespaces
+istitle() # Returns True if the string follows the rules of a title
+isupper() # Returns True if all characters in the string are upper case
+
+join() # Joins the elements of an iterable to the end of the string
+
+lstrip() # Returns a left trim version of the string
+rstrip() # Returns a right trim version of the string
+strip() # Returns a trimmed version of the string
+
+maketrans() # Returns a translation table to used in translations
+translate() # Returns a translated string
+
+partition() # Returns a tuple where the string is parted into three parts
+rpartition() # Returns a tuple where the string is parted into three parts
+rsplit() # Splits the string at the specified separator and returns list
+split() # Splits the string at the specified separator and returns list
+splitlines() # Splits the string at line breaks and returns list
+
+replace() # Replace a specified value with a different value
+
+zfill() # Fills the string with a specified number of 0 values at the beginning
 
 ### Integers
 
@@ -98,6 +156,9 @@ Pass statement can be used for empty if statements to avoid getting an error.
 
 ## Loops
 
+for ch in password:
+This is a for loop - Useful when need to iterate over the whole string
+
 while is_valid == False: 
 This is a while loop.
 
@@ -106,5 +167,4 @@ This is a while loop.
 print() # Prints arguments to console, use commas to concatenate 
 input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
-format() # Used to format the different data types a specified way
 import # Used to import packages
