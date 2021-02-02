@@ -19,6 +19,7 @@ Assign a string to a variable with an equal sign.
 Assign a multiline string to a variable by using three quotes.
 
 string[0:1] # Returns 1st letter
+string[1:10:2] # Counts by 2 from 1 to 10. Increments by 1 by default.
 Strings are arrays, so can use square brackets to access elements of the string
 or loop through the string with for loop.
 
