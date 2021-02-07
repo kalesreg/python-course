@@ -36,7 +36,7 @@ else:
 # Strip the phone number and combine into a string
 if valid == True:
     area_code = telephone_number[1:4:]
-    three_digit_prefix = telephone_number[5:8:] # Increments by 1 by default but could change using the second colon
+    three_digit_prefix = telephone_number[5:8:]
     line_number = telephone_number[9:13]
     unformatted_telephone_number = area_code + three_digit_prefix + line_number
     print("The telephone number input is now unformatted as", unformatted_telephone_number)
