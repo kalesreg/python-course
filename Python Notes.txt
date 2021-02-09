@@ -119,6 +119,13 @@ is true except 0, any list, tuple, set, and dictionary are true except empty one
 + # Plus sign is used for addition
 - # Dash is used for subtraction
 
+Augmented Assignment Operators - variable on left also appears on the right of =
++= so x += 5 is equivalent to x = x + 5
+-= so x -= 5 is equivalent to x = x - 5
+*= so x *= 5 is equivalent to x = x * 5
+/= so x /= 5 is equivalent to x = x / 5
+%= so x %= 5 is equivalent to x = x % 5
+
 ## Conditions and If Statements
 
 a == b # Equals
@@ -157,11 +164,69 @@ Pass statement can be used for empty if statements to avoid getting an error.
 
 ## Loops
 
-for ch in password:
-This is a for loop - Useful when need to iterate over the whole string
+for variable in [val1, val2, etc]:
+    statements
+This is a for loop. Repitition structure that iterates a specific number of times.
+Use range(start, end, step) to create an iterble object.
+Turtle graphics can be used with a for loop to draw designs.
 
-while is_valid == False: 
-This is a while loop.
+while condition:
+    statements
+This is a while loop. Repetition structure that repeats while condition is true
+Something needs to happen within the while loop to make the condition false.
+Infinite loops occur when a loop has no way of stopping.
+Input validation often uses a while loop
+
+Nested loop is a loop that is contained inside another loop.
+
+Target variable is used to reference each item in a sequence as the loop iterates.
+
+Sentinel is a special value that marks the end of a sequence and terminates loop.
+
+## Sequence
+
+Sequences are objects that contain multiple items of data.
+
+### Lists
+list = [item1, item2, etc.]
+Lists are a mutable object that contain multiple data items of different types.
+Element is an item in a list. 
+Lists can be iterated over using a for loop.
+Lists can be concatenated and sliced. 
+To create a copy of a list, you must copy each element of the list.
+
+list[start:end]
+Slice is a span of items that are taken from a sequence. 
+Span is a list from start up to but not including end.
+
+Use list() to convert certain types of objects to lists.
+
+The repetition operator (*) makes multiple copies of a list and joins together.
+
+An index is a number specifying the position of an element in a list.
+
+item in list
+Use in operator to determine whether an item is contained in a list.
+
+append(item) # Used to add items to a list
+index(item) # Used to determine where an item is located in a list
+insert(index, item) # Used to insert item at position index in the list
+sort() # Used to sort the elements of the list in ascending order
+remove(item) # Removes the first occurrence of item in the list
+reverse() # Reverses the order of the elements in the list
+del list[i] # Removes an element from a specific index in a list
+
+writelines # Used to save the contents of a list to a file
+readlines # Used to read data from a file
+
+### Tuple
+tuple_name = (item1, item2)
+Tuple is an immutable sequence. Very similar to list just cannot be changed.
+Tuples support indexing, len, min, max, slicing, in, +, and *.
+Tuples do not support appending, removing, inserting, reversing, or sorting.
+Tuples can be processed faster, are safer, and some operations require tuples.
+
+tuple() # Converts list to tuple
 
 ## Functions
 
@@ -169,3 +234,4 @@ print() # Prints arguments to console, use commas to concatenate
 input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
 import # Used to import packages
+len() # Returns the length of a sequence
