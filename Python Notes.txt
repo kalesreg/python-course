@@ -228,6 +228,93 @@ Tuples can be processed faster, are safer, and some operations require tuples.
 
 tuple() # Converts list to tuple
 
+## Dictionaries
+
+dictionary = {key1:val1, key2:val2}
+
+Dictionary is an object that stores a collection of data.
+Each element consists of a key and a value (as a tuple). Elements are unsorted.
+Key must be an immutable object, but values can be any type of object.
+dict() or {} to create empty dictionary.
+for loops can iterate over dictionaries.
+
+dictionary[key]
+Use the key to retrieve a specific value.
+Test whether a key is in a dictionary using in and not in.
+dictionary.get(key, default)
+Gets a value associated with specified key from the dictionary.
+dictionary.items()
+Returns all the dictionaries keys and associated values.
+dictionary.keys()
+Returns all the dictionaries keys as a sequence.
+dictionary.pop(key, default)
+Returns value associated with specified key and removes that key-value pair
+from the dictionary.
+dictionary.popitem()
+Returns a randomly selected key-value pair and removes that key-value pair
+from the dictionary.
+dictionary.values()
+Returns all the dictionaries values as a sequence.
+
+del dictionary[key]
+Used to delete a key-value pair.
+dictionary.clear()
+Deletes all the elements in a dictionary, leaving it empty.
+
+## Sets
+
+Set is an object that stores a collection of data in same way as mathematical set.
+All items must be unique. Set is unordered. Elements can be different data types.
+Sets are mutable objects.
+for loop can be used to iterate over elements in a set.
+The in operator can be used to test whether a value exists in a set.
+set() # Used to create a set.
+
+set.add() # Adds an element to a set
+set.update() # Adds a group of elements to a set.
+set.remove() # Remove the specified item from the set.
+set.discard() # Remove the specified item form the set.
+set.clear() # Clears all the elements of the set.
+
+set1.union(set2)
+set1 | set2
+Union of two sets is a set that contains all the elements of both sets.
+set1.intersection(set2)
+set1 & set2
+Intersection of two sets is a set that contains only the elements found in both sets.
+set1.difference(set2)
+set1 - set2
+Difference of two sets is a set that contains the elements that appear in the
+first set but not the second set.
+set1.symmetric_difference(set2)
+set1 ^ set2
+Symmetric difference of two sets is a set that conatins the elements that are
+not shared by the two sets.
+setA.issubset(setB)
+setA <= setB
+Used to determine if Set A is a subset of set B, meaning all elements in set A
+are included in set B.
+setA.issuperset(setB)
+setA >= setB
+Used to determine whether set A is a superset of Set B, meaning set A contains
+all the elements of set B.
+
+## Serializing Objects
+
+Serializing an object converts an object to a stream of bytes that can be
+easily be stored in a file. This is called pickling.
+
+Import pickle module. 
+Open file for binary writing.
+Call pickle.dump(object, file).
+Close the file.
+
+Unpickeling retrieves pickeled object.
+import the pickle module.
+Open a file for binary writing.
+Call the pickle.load(file).
+Close the file.
+
 ## Functions
 
 print() # Prints arguments to console, use commas to concatenate 
