@@ -109,6 +109,38 @@ True or False, used to compare values
 bool() # Evaluate any value, any string is true except empty strings, any number
 is true except 0, any list, tuple, set, and dictionary are true except empty ones
 
+To get a boolean as an input, you would use bool(input()).
+For the input, anything entered with result in True. Press enter for False.
+
+### Formatting Codes
+
+Formatting codes are used to format the different data types.
+
+The % symbol tells the interpreter this is the start of a print formatting code
+which serves as a placeholder for a variable or literal string that follows in
+the parentheses.
+The , symbol is used as a concatenation character within the parentheses.
+
+print("The value of my float is %.2f%s" % (a_float, "."))
+print("The value of my integer is %d%s" % (an_integer, "."))
+print("The value of my string is %s%s\n\n" % (a_string, "."))
+print("The value of my boolean is %s%s\n" % (bool(a_boolean), "."))
+Use f for float, use d for integer, use s for string.
+You can put an integer(d) into a float(f) but don't put a float(f) into 
+a integer(d). You can put anything into a s but you can't control decimal 
+places.  
+
+print("The value of my float is ", format(a_float, ',.2f'), ".")
+This is another way to use format codes using format().
+
+print("%-20s%20s" % ("Types of Data", "Values Entered" ))
+print("%-20s%20.2f" % ("A Float", a_float ))
+print("%-20s%20d" % ("An Integer", an_integer ))
+print("%-20s%20s" % ("A String", a_string))
+print("%-20s%20s" % ("A Boolean", a_boolean))
+These statements will print out in 2 columns that are 20 characters wide.
+The - sets left alignment, don't use the - and you set right alignment.
+
 ## Math
 
 ** # Exponent operator
@@ -322,3 +354,4 @@ input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
 import # Used to import packages
 len() # Returns the length of a sequence
+inspect.getsource() # See the code for an imported function, import inspect
