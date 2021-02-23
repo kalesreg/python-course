@@ -10,7 +10,7 @@ rock_paper_scissors.py
 import random
 
 # Use sentinel value loop to control the program
-print("Please enter Play if you want to play the game or anything else to stop.")
+print("Please enter Play if you want to play the game or anything else to stop.", end="")
 run_program = input()
 game_counter = 1
 ties = 0
@@ -21,7 +21,7 @@ while run_program.upper() == "PLAY":
     game_counter = game_counter + 1 # Count the number of games played
     
     # Provide information for input options and get input
-    print("Choose your weapon: R for Rock, P for Paper, or S for Scissors")
+    print("Choose your weapon: R for Rock, P for Paper, or S for Scissors", end="")
     weapon = input()
 
     # Validate the choice of weapon
@@ -33,7 +33,7 @@ while run_program.upper() == "PLAY":
         else:
             valid = False
             print("Invalid entry.")
-            print("Choose your weapon: R for Rock, P for Paper, or S for Scissors")
+            print("Choose your weapon: R for Rock, P for Paper, or S for Scissors", end="")
             weapon = input()
 
     # Generate number using random number generator
@@ -50,30 +50,36 @@ while run_program.upper() == "PLAY":
 
     # Determine who won the game and display a message. Keep track of tie 
     # games, how many games the user wins, and how many games I win.
+    
+    # Switched to nested if statements since it executes faster.
     if weapon.upper() == opponent_weapon:
         print("Tie!")
         ties += 1
-    elif weapon.upper() == "P" and opponent_weapon == "S":
-        print("Scissors beats paper, a win for me!")
-        opponent_wins += 1
-    elif weapon.upper() == "S" and opponent_weapon == "R":
-        print("Rock beats scissors, a win for me!")
-        opponent_wins += 1
-    elif weapon.upper() == "R" and opponent_weapon == "P":
-        print("Paper beats rock! a win for me!")
-        opponent_wins += 1
-    elif weapon.upper() == "S" and opponent_weapon == "P":
-        print("Scissors beats paper, a win for you!")
-        user_wins += 1
-    elif weapon.upper() == "R" and opponent_weapon == "S":
-        print("Rock beats scissors, a win for you!")
-        user_wins += 1
+    elif weapon.upper() == "R":
+        if opponent_weapon == "P":
+            print("Paper beats rock! a win for me!")
+            opponent_wins += 1
+        else:
+            print("Rock beats scissors, a win for you!")
+            user_wins += 1
+    elif weapon.upper() == "P":
+        if opponent_weapon == "R":
+            print("Paper beats rock! a win for you!")
+            user_wins += 1
+        else:
+            print("Scissors beats paper, a win for me!")
+            opponent_wins += 1
     else:
-        print("Paper beats rock! a win for you!")
-        user_wins += 1
+        if opponent_weapon == "R":
+            print("Rock beats scissors, a win for me!")
+            opponent_wins += 1
+        else:
+            print("Scissors beats paper, a win for you!")
+            user_wins += 1
     
     # Either end or continue the while loop
-    print("Please enter Play if you want to play the game again or anything else to Stop.")
+    print()
+    print("Please enter Play if you want to play the game again or anything else to Stop.", end="")
     run_program = input()
 
 # After stop the game, display report that shows who won the most games
