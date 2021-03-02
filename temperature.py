@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Feb 23 11:35:54 2021
-temperature_nov9.py
+temperature.py
 @author: kales
 """
 # This program tracks temperatures over a number of days in lists.
@@ -12,6 +12,7 @@ lows = [0.0] * num_days
 highs = [0.0] * num_days
 average_temps = [0.0] * num_days
 dates = [" "] * num_days
+sum_average_temps = 0.0
 
 # Load the values into the lists (lows, highs, average_temps, dates)
 for i in range(0, num_days, 1):
@@ -78,5 +79,13 @@ print("%-20s%15s" % ("Highest Low Date", dates[highest_low_index]))
 # Code to print the days where low temperatures fell below freezing 32F
 for q in range(len(lows)):
     if lows[q] < 32:
-        print("The low of", lows[q], "fell below freezing on", dates[q], ".")
+        print("The low of ", lows[q], " fell below freezing on ", dates[q], ".", sep="")
+
+# Code to calculate the average of the average_temps
+for s in range(0, len(average_temps), 1):
+    sum_average_temps = sum_average_temps + average_temps[s]
         
+average_average_temps = sum_average_temps / len(average_temps)
+
+print("The average temperature for all temps recorded is ",\
+      format(average_average_temps, '.1f'), ".", sep="")
