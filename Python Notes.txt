@@ -220,8 +220,10 @@ Sentinel is a special value that marks the end of a sequence and terminates loop
 Sequences are objects that contain multiple items of data.
 
 ### Lists
+
 list = [item1, item2, etc.]
-Lists are a mutable object that contain multiple data items of different types.
+
+Lists are ordered, changeable, and allow for duplicates.
 Element is an item in a list. 
 Lists can be iterated over using a for loop.
 Lists can be concatenated and sliced. 
@@ -252,22 +254,39 @@ writelines # Used to save the contents of a list to a file
 readlines # Used to read data from a file
 
 ### Tuple
+
 tuple_name = (item1, item2)
-Tuple is an immutable sequence. Very similar to list just cannot be changed.
+
+Tuples are ordered, unchangeable, and allow duplicates.
 Tuples support indexing, len, min, max, slicing, in, +, and *.
 Tuples do not support appending, removing, inserting, reversing, or sorting.
 Tuples can be processed faster, are safer, and some operations require tuples.
 
 tuple() # Converts list to tuple
 
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+Unpacking a tuple allows you to extract the values back into variables.
+Use the asterisk to add values to that variable as a list.
+
+tuple3 = tuple1 + tuple2
+Join two or more tuples using the + operator.
+tuple2 = tuple1 * 2
+Multiple the contents of the tuples using the * operator.
+
+count() # Returns the number of times a specified value occurs in a tuple
+index() # Searches the tuple for a specified value and returns the position
+sorted() # Sorts the elements in order
+
 ## Dictionaries
 
 dictionary = {key1:val1, key2:val2}
 
-Dictionary is an object that stores a collection of data.
-Each element consists of a key and a value (as a tuple). Elements are unsorted.
-Key must be an immutable object, but values can be any type of object.
+Dictionary is ordered, changeable, and does not allow duplicates.
+Each element consists of a key and a value (as a tuple).
+
 dict() or {} to create empty dictionary.
+
 for loops can iterate over dictionaries.
 
 dictionary[key]
@@ -295,12 +314,14 @@ Deletes all the elements in a dictionary, leaving it empty.
 
 ## Sets
 
-Set is an object that stores a collection of data in same way as mathematical set.
-All items must be unique. Set is unordered. Elements can be different data types.
-Sets are mutable objects.
+set = {val1, val2, val3}
+
+Set items are unordered, unchangeable, and no duplicates are allowed.
+
+set() # Used to create a set.
+
 for loop can be used to iterate over elements in a set.
 The in operator can be used to test whether a value exists in a set.
-set() # Used to create a set.
 
 set.add() # Adds an element to a set
 set.update() # Adds a group of elements to a set.
@@ -349,9 +370,40 @@ Close the file.
 
 ## Functions
 
+Functions are a group of statements within a program that performs a specific task.
+Modularized program has each task within the program be its own function.
+Void function executes the statements and then terminates
+Value-Returning function executes its statements and returns a value.
+Boolean function returns either True or False.
+
+Menu-driven program displays a list of operations on the screen and allows the user
+to select the desired operation. Usually repeats until user quits.
+
+Function definition specifies what a function does:
+def function_name():
+    statement
+    statement
+Argument is a piece of data that is sent into a function.
+Parameter variable is assigned a value of the argument when the function is called.
+
+A function is executed after it is called.
+
+The main function defines the mainline logic and calls other functions when needed.
+
+Scope defines the part of a program in which a variable may be accessed.
+Local variable is assigned a value inside a funciton and can only be 
+accessed within the function.
+Global vairable is created by assignment statement written outside all functions.
+
+Standard library is the pre-written functions that comes with Python.
+Modules are files that stores functions of the standard library.
+import # Used to import packages
+Dot notation is used for calling a function belonging to a module.
+Random module includes library functions for working with random numbers.
+math module includes functions that are useful for mathematical calculations.
+
 print() # Prints arguments to console, use commas to concatenate 
 input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
-import # Used to import packages
 len() # Returns the length of a sequence
 inspect.getsource() # See the code for an imported function, import inspect
