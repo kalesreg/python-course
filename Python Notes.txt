@@ -407,3 +407,6 @@ input() # Accepts user input from the console based on a prompt
 .upper() # Makes the string variable uppercase
 len() # Returns the length of a sequence
 inspect.getsource() # See the code for an imported function, import inspect
+
+## Exceptions
+https://docs.python.org/3/library/exceptions.html
