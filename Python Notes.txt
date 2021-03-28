@@ -409,4 +409,54 @@ len() # Returns the length of a sequence
 inspect.getsource() # See the code for an imported function, import inspect
 
 ## Exceptions
+Exceptions are errors that occur while a program is running.
+Traceback is an error message that gives info regarding exception.
+Exception handler is code that responds when exceptions are raised
+and prevents program from craching.
+Exception handler is written as a try/except statement:
+try: 
+    statements # statements that could result in exception
+except exceptionName:
+    statements # Handler executes if exception is raised, otherwised skipped
+else:
+    statements # Else block (optional) only executes if no exception is raised
+finally: 
+    statements #  (optional) Executes whether exception occurs or not
+
+List of built in exceptions:
 https://docs.python.org/3/library/exceptions.html
+
+## Files
+Data is saved to a file so it can be retrieved and used at a later time.
+Three steps when a program uses a file: open, process, and close.
+Two types of files: text and binary files.
+Two ways to access data stored in file: sqequential and direct access.
+
+Loops are often used to read and write files.
+while line != '' is often used.
+for line in file_object: iterates over each line in the file.
+
+open(filename, mode) 
+Open function used to open a file.
+Modes are 'r' (read only), 'w' (write), and 'a' (appending).
+When a file is opened in 'w' mode, the file will be overwritten if it exists.
+When a file is opened in 'a' mode, the file will not be erased if it exists.
+
+file_variable.write(string)
+Write method used to write data to the file.
+To start a new line, usually necessary to concatenate a '\n' to data.
+Use the + operator in the argument to concatenate.
+Numbers must be converted to strings before they are written to file using str().
+
+file_variable.close()
+Close method used to close the file object.
+
+file_variable.read()
+Read method reads entire file contents into memory. 
+File must have be opened first. Contents returned as string.
+
+file_variable.readline()
+Readline method reads a line from the file.
+Line is returned as a string, including the '\n'.
+To remove '\n' from a string, use the rstrip method.
+Numbers must be converted from strings to numeric type to perform math operations.
