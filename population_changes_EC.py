@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 25 11:41:12 2021
-population_changes.py
+Created on Tue Mar 30 11:57:03 2021
+population_changes_EC.py
 @author: kales
 """
 # The program assumes that all population changes are positive. That is, that
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 def main():
     # Set variables
     yearly_change = []
-    yearly_population = [0.0] * 41
+    population_list = [0.0] * 41
     change = 0.0
     total_change = 0.0
     average_change = 0.0
@@ -22,39 +22,40 @@ def main():
     
     # Constant for the base year
     BASE_YEAR = 1950
+    import csv
     
     try:
         # Open the file for reading
-        input_file = open('USPopulation.txt', 'r')
+        with open("USPopulationEC.txt", newline = '') as population_file:
+            population_reader = csv.reader(population_file, delimiter = '\t')
+            population_list = [row for row in population_reader]
+        print(population_list)
         
         # Read all the lines from the file into a list
-        yearly_population = input_file.readlines()
-        
-        # Set year = BASE_YEAR
-        year = BASE_YEAR
+        print("Number of rows in the list:", len(population_list))
         
         # Print headings
         print("%10s%20s" % ("Year", "Population"))
         
         # Change all strings that were read in into floats
-        # then print the yearly_population list contents
-        for i in range(len(yearly_population)):
-            yearly_population[i] = float(yearly_population[i])
-            print(format(year, '10d'), end = "")
-            print(format(yearly_population[i], '20,.0f'))
-            year = year + 1
-            
+        # then print the population_list list contents
+        for i in range(len(population_list)):
+            population_list[i][0] = int(population_list[i][0])
+            population_list[i][1] = float(population_list[i][1])
+            print(format(population_list[i][0], '10d'), end = "")
+            print(format(population_list[i][1], '20,.0f'))
+           
         # Calculate the change in population size for each 2 years
-        for j in range(1, len(yearly_population)):
-            change = yearly_population[j] - yearly_population[j-1]
+        for j in range(1, len(population_list)):
+            change = population_list[j][1] - population_list[j-1][1]
             yearly_change.append(change)
-            
+          
         # Set year = BASE_YEAR
         year = BASE_YEAR
         # Print headings
-        print("\n%-18s%20s" % ("Year to Year", "Population Increase"))
+        print("\n%3s%-18s%20s" % (" ", "Year to Year", "Population Increase"))
         # Change all string that were read in into floats
-        # then print the yearly_population list contents
+        # then print the population_list list contents
         for k in range(0, len(yearly_change)):
             print(format(year, '5d'), end = "")
             print('  to ', format(year + 1, '5d'), end="")
