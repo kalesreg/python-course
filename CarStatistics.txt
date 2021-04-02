@@ -1,3 +1,3 @@
-45
-13
-21625.0
+Highest Sedan MPG: 45
+Lowest Sedan MPG: 13
+BMW and MB Avg Price < 30K 21625.0

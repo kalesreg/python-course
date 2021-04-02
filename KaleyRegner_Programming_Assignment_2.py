@@ -31,17 +31,20 @@ def main():
         
         # Task 2
         # Convert strings to integers
+        # Note: I originally combined task 2 and 3 but decided to split them up
+        # for readability.
         for i in range(len(auto_list)):
             auto_list[i][2] = int(auto_list[i][2])
             auto_list[i][3] = float(auto_list[i][3])
             
         # Print data types for row 0
+        # Note: I could have used a loop here but it was unnecessary. 
         print("\nData type type of row 0, col 0 -->", type(auto_list[0][0]))
         print("Data type type of row 0, col 1 -->", type(auto_list[0][1]))
         print("Data type type of row 0, col 2 -->", type(auto_list[0][2]))
         print("Data type type of row 0, col 3 -->", type(auto_list[0][3]))
                 
-       # Task 3
+        # Task 3
         # Print all rows with the headings Manufacturer, Body-Style, MPG, and Price
         print("\n%-20s%15s%10s%20s" % ("Manufacturer", "Body-Style", "MPG", "Price"))
         for j in range(len(auto_list)):    
@@ -82,10 +85,12 @@ def main():
         
         # Task 5
         # Create an ouput file (CarStatistics.txt) to save results from Task 3 and 4
-        stat_file = open('CarStatistics.txt', 'w') # Chose w instead of a, but could have appended but not relevant here
-        stat_file.write(str(highest_mpg) + '\n')
-        stat_file.write(str(lowest_mpg) + '\n')
-        stat_file.write(str(avg_price) + '\n')
+        # Note: Chose w instead of a for openning the file. Could have appended 
+        # but was not relevant in this context.
+        stat_file = open('CarStatistics.txt', 'w')
+        stat_file.write('Highest Sedan MPG: ' + str(highest_mpg) + '\n')
+        stat_file.write('Lowest Sedan MPG: ' + str(lowest_mpg) + '\n')
+        stat_file.write('BMW and MB Avg Price < 30K ' + str(avg_price) + '\n')
         stat_file.close()
         print("Data written to CarStatistics.txt")
     
