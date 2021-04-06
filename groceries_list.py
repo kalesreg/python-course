@@ -31,6 +31,16 @@ def main():
                                        "Item Price", "Total Price"))
     display_list(items, qty, price, total_price)
     
+    # Calculate sum_prices
+    for i in range(0, num_items, 1):
+        sum_prices = sum_prices + total_price[i]
+    
+    # Display total
+    print("%-10s%20.2f\n" % ("Total Purchase", sum_prices))
+    
+    # Save grocery list
+    save_grocery_list(items, qty, price, total_price)
+    
         
 def validate_range(value, low_range, high_range):
     while True:
@@ -87,6 +97,27 @@ def display_list(items, qty, price, total_price):
         print("There was an indexing error.")
     except Exception as err:
         print("An error occurred.")
+        print(err)
+
+def save_grocery_list(items, qty, price, total_price):
+    try:
+        headings = ["Items", "Qty", "Unit Price", "Total Price"]
+        
+        with open("groceries_file.csv", "w") as groceries_file:
+            write = csv.writer(groceries_file)
+            write.writerow(headings)
+            i = 0
+            for row in items:
+                write.writerow([items[i], qty[i], price[i], total_price[i]])
+                i = i + 1
+            
+            groceries_file.close()
+    except IndexError:
+        print("There was an indexing error.")
+    except IOError:
+        print("An error occurred trying to write to the file.")
+    except Exception as err:
+        print("An error occurred. Give the following to the help desk.")
         print(err)
 
 main()
