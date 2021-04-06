@@ -158,7 +158,9 @@ Augmented Assignment Operators - variable on left also appears on the right of =
 /= so x /= 5 is equivalent to x = x / 5
 %= so x %= 5 is equivalent to x = x % 5
 
-## Conditions and If Statements
+## Control Structures
+
+### Conditions and If Statements
 
 a == b # Equals
 a != b # Not Equals
@@ -194,7 +196,7 @@ If statements can be nested inside other if statements.
 
 Pass statement can be used for empty if statements to avoid getting an error.
 
-## Loops
+### Loops
 
 for variable in [val1, val2, etc]:
     statements
@@ -278,7 +280,7 @@ count() # Returns the number of times a specified value occurs in a tuple
 index() # Searches the tuple for a specified value and returns the position
 sorted() # Sorts the elements in order
 
-## Dictionaries
+### Dictionaries
 
 dictionary = {key1:val1, key2:val2}
 
@@ -312,7 +314,7 @@ Used to delete a key-value pair.
 dictionary.clear()
 Deletes all the elements in a dictionary, leaving it empty.
 
-## Sets
+### Sets
 
 set = {val1, val2, val3}
 
@@ -351,22 +353,6 @@ setA.issuperset(setB)
 setA >= setB
 Used to determine whether set A is a superset of Set B, meaning set A contains
 all the elements of set B.
-
-## Serializing Objects
-
-Serializing an object converts an object to a stream of bytes that can be
-easily be stored in a file. This is called pickling.
-
-Import pickle module. 
-Open file for binary writing.
-Call pickle.dump(object, file).
-Close the file.
-
-Unpickeling retrieves pickeled object.
-import the pickle module.
-Open a file for binary writing.
-Call the pickle.load(file).
-Close the file.
 
 ## Functions
 
@@ -408,24 +394,6 @@ input() # Accepts user input from the console based on a prompt
 len() # Returns the length of a sequence
 inspect.getsource() # See the code for an imported function, import inspect
 
-## Exceptions
-Exceptions are errors that occur while a program is running.
-Traceback is an error message that gives info regarding exception.
-Exception handler is code that responds when exceptions are raised
-and prevents program from craching.
-Exception handler is written as a try/except statement:
-try: 
-    statements # statements that could result in exception
-except exceptionName:
-    statements # Handler executes if exception is raised, otherwised skipped
-else:
-    statements # Else block (optional) only executes if no exception is raised
-finally: 
-    statements #  (optional) Executes whether exception occurs or not
-
-List of built in exceptions:
-https://docs.python.org/3/library/exceptions.html
-
 ## Files
 Data is saved to a file so it can be retrieved and used at a later time.
 Three steps when a program uses a file: open, process, and close.
@@ -460,3 +428,92 @@ Readline method reads a line from the file.
 Line is returned as a string, including the '\n'.
 To remove '\n' from a string, use the rstrip method.
 Numbers must be converted from strings to numeric type to perform math operations.
+
+## Exceptions
+Exceptions are errors that occur while a program is running.
+Traceback is an error message that gives info regarding exception.
+Exception handler is code that responds when exceptions are raised
+and prevents program from craching.
+Exception handler is written as a try/except statement:
+try: 
+    statements # statements that could result in exception
+except exceptionName:
+    statements # Handler executes if exception is raised, otherwised skipped
+else:
+    statements # Else block (optional) only executes if no exception is raised
+finally: 
+    statements #  (optional) Executes whether exception occurs or not
+
+List of built in exceptions:
+https://docs.python.org/3/library/exceptions.html
+
+## Procedural and Object-Oriented Programming
+
+Procedural programming is writing programs made of functions that perform 
+specific tasks. Typically used to operate on data items that are separate 
+from the procedures. Those data items are then usually passed from one 
+procedure to another.
+
+Object-oriented programming focuses on creating objects. An object is an 
+entity that contains data and procedures. Procedures are known as methods, 
+which perform operations on the data attributes.
+Data attributes define the state of an object.
+Encapsulation combines data and code into a single object. 
+Data hiding is when an object's data attributes are hidden from code outside
+the object, so access is restricted to the object's methods.
+Object reusability allows for the same object to be used in different programs.
+Public methods allow external code to manipulate the object.
+Private methods used for object's inner workings.
+An object's data attributes should be private. To do this, place two 
+underscores (__) in front of the attribute name. Format: __current_minute.
+Object's state is the values of the object's attribute at a given moment.
+The __str__ method displays the object's state.
+UML diagram is standard diagrams for graphically depicting object-oriented 
+systems. The general layout is a box divided into three sections. The top 
+section is the name of the class. The middle section lists the data attributes.
+The bottom section lists the class methods.
+
+Class is code that specifies the data attributes and methods of a particular
+type of object. The class definition is a set of statements that define a 
+class's methods and data attributes. Format: class Class_name:.
+Instance is an object created from a class. There can be many instances of 
+one class. Instance attributes belong to a specific instance of a class and 
+are created when a method uses the self parameter to create an attribute. If 
+many instances of a class are created, each instance would have its own set of 
+attributes. 
+Classes can be stored in modules. Filename for module must end in .py. 
+Modules can be imported to programs that use the class.
+
+Method deinition is like any other python function definition. The self 
+parameter is required in every method in the class. It references the specific
+object that the method is working on.
+Initializer method automatically executes when an instance of the class is 
+created. Format: def __init__(self):.
+Call the initializer method to create a new instance of a class. Format:
+My_instance = Class_Name(). Use dot notation to call any of the class methods
+using the created instance. Format: My_instance.method(). 
+Class methods can have multiple parameters in addition to self. For __init__,
+parameters needed to create an instance of the class. Other parametes may be 
+needed to perform required tasks for other methods. 
+Accessor methods return a value from a class's attribute without changing it.
+Mutator methods store and change the value of a data attribute.
+Methods and functions can accept objects as arguments. When passing an object
+as an argument, it is actually passing a reference to the object. The 
+receiving method or function has access to the actual object so the methods of
+the object can be called or changed.
+
+## Serializing Objects
+
+Serializing an object converts an object to a stream of bytes that can be
+easily be stored in a file. This is called pickling.
+
+Import pickle module. 
+Open file for binary writing.
+Call pickle.dump(object, file).
+Close the file.
+
+Unpickeling retrieves pickeled object.
+import the pickle module.
+Open a file for binary writing.
+Call the pickle.load(file).
+Close the file.
