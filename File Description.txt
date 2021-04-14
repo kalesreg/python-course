@@ -1,0 +1,78 @@
+# File Descriptions
+Put relevant files in certain categories to find relevant code later.
+
+## Control Structures and Print f codes
+- amortization_schedule.py: shows the detail for loan payments with a fixed rate
+- basketball_game.py: simulates a basketball game from user input
+- breaks_and_continue.py: demonstrates break and continue statements in loops
+- compare_names.py: compars strings with the < operator
+- debug_fat_grams.py: demonstrates a solution to the Fat Gram Calculator programming challenge
+- discounts.py: calculate the discount for early payments of a utility bill
+- half_me_debug: half of a sum
+- hello_world.py: print statements
+- input.py: using input statements to get input from the user
+- login_name.py: validates a password
+- number_guessing_game.py: simulates number guessing game based on user input
+- potomac_nationals_if_elif.py: calculate ticket price based on user selection
+- potomac_nationals_sequential_ifs_debug.py: calculate ticket price based on user selection
+- rock_paper_scissors.py: allows user to play Rock, Paper, Scissors
+- sales_price.py: calculates sale price from discount
+- seconds_converter.py: converts input seconds to hours, minutes, seconds
+- sentinel_value_loop.py: calculates the sum of a series of numbers entered by the user and lets the user choose whether or not they want to run the program
+- shipping_charges.py: determines the shipping costs for a freight company
+- split_a_date.py: split a date at the / and store the month, day, and year separately
+- telephone_number.py: check to see if a telephone number entered by the user is formatted correctly
+- temperature.py: tracks temperatures over a number of days in lists
+- temperatures_2d.py: temperatures over a number of days in a two dimensional list
+
+## Data Structures
+- birthdays.py: dictionary for storing birthdays
+- birthdays2.py: dictionary for storing birthdays using functions
+- cell_phone_list.py: creates 3 CellPhone objects and stores them in a list
+- groceries_list.py: creates and displays a grocery list based on user input
+- KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
+- multi_dimensional_list.py: Initializing a 2 dimensional list and filling it with random values
+- mutable_vs_immutable.py: demonstrates the difference between mutable and immutable objects
+- payroll.py: process a payroll report and save the results to an output file
+- set_lab.py: demonstrates how to use sets
+- temperature.py: tracks temperatures over a number of days in lists
+- temperatures_2d.py: temperatures over a number of days in a two dimensional list
+- tuples_lab.py: demonstrates how to use tuples
+
+## Functions
+- add_coffee_record.py: adds coffee inventory records to a coffee.txt file
+- birthdays2.py: dictionary for storing birthdays using functions
+- cell_phone_list.py: creates 3 CellPhone objects and stores them in a list
+- cups_to_ounces_debug.py: converts cups to fluid ounces
+- delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
+- groceries_list.py: creates and displays a grocery list based on user input
+- population_changes_EC.py: calculates and displays pop. changes from data file
+- search_coffee_record.py: searches the coffee.txt file
+
+## Exception Handling
+- add_coffee_record.py: adds coffee inventory records to a coffee.txt file
+- delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
+- groceries_list.py: creates and displays a grocery list based on user input
+- KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
+- payroll.py: process a payroll report and save the results to an output file
+- population_changes.py: calculates and displays pop. changes from data file
+- population_changes_EC.py: calculates and displays pop. changes from data file
+- search_coffee_record.py: searches the coffee.txt file
+- unpickle_cellphone.py: unpickles cell phone objects
+
+## Reading From or To a File
+- add_coffee_record.py: adds coffee inventory records to a coffee.txt file
+- delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
+- groceries_list.py: creates and displays a grocery list based on user input
+- KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
+- payroll.py: process a payroll report and save the results to an output file
+- pickle_cellphone.py: pickles (serializes) cell phone objects
+- population_changes.py: calculates and displays pop. changes from data file
+- search_coffee_record.py: searches the coffee.txt file
+- unpickle_cellphone.py: unpickles cell phone objects
+
+## Object Oriented Programming
+- account_test.py: demonstrates the BankAccount class
+- bankaccount.py: BankAccount class simulates a bank object
+- cell_phone_test.py: tests the CellPhone class
+- cellphone.py: class holds data about a cell phone
