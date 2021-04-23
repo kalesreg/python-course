@@ -13,19 +13,35 @@ class KiloConverterGUI:
         # Create the main window
         self.main_window = tkinter.Tk()
         
-        # Create 2 frames to group widgets
+        # Create 3 frames to group widgets
         self.top_frame = tkinter.Frame()
+        self.mid_frame = tkinter.Frame()
         self.bottom_frame = tkinter.Frame()
         
         # Create the widgets for the top frame
         self.prompt_label = tkinter.Label(self.top_frame, \
                                           text = "Enter kilometers:")
-        self.kilo_entry = tkinter.Entry(self. top_frame, width = 10)
+        self.kilo_entry = tkinter.Entry(self.top_frame, width = 10)
         
         # Pack the top frame's widgets
         self.prompt_label.pack(side='left')
         self.kilo_entry.pack(side='right')
         
+        # Create the widgets for the middle frame
+        self.descr_label = tkinter.Label(self.mid_frame, \
+                                         text = "Converted to Miles: ")
+        
+        # Create a StringVar object for the outfield
+        self.value = tkinter.StringVar()
+        
+        # Create a label associated with the StringVar() object
+        self.miles_label = tkinter.Label(self.mid_frame, \
+                                         textvariable = self.value)
+        
+        # Pack the middle frame's widgets
+        self.descr_label.pack(side = 'left')
+        self.miles_label.pack(side = 'left')
+            
         # Create the button widgets for the bottom frame
         self.calc_button = tkinter.Button(self.bottom_frame, text = "Convert", \
                                           command = self.convert)
@@ -38,6 +54,7 @@ class KiloConverterGUI:
         
         # Pack the frames
         self.top_frame.pack()
+        self.mid_frame.pack()
         self.bottom_frame.pack()
         
         # Enter the tkinter main loop
@@ -51,9 +68,9 @@ class KiloConverterGUI:
         # Convert to miles
         miles = kilo * 0.6214
         
-        # Dsiplay the results in an info dialog box
-        tkinter.messagebox.showinfo("Results", str(kilo) + " kilometers is equal to " + \
-                                    str(miles) + " miles.")
+        # Display the results in the same window
+        self.value.set(miles)
+        
 
 # Create an instance of the KiloConverterGUI class
 kilo_conv = KiloConverterGUI()
