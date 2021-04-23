@@ -502,6 +502,102 @@ as an argument, it is actually passing a reference to the object. The
 receiving method or function has access to the actual object so the methods of
 the object can be called or changed.
 
+### Inheritance
+Inheritance creats an "is a" relationship between clases. An "is a" 
+relationship exists when one object is a specialized verion of 
+another object.
+Superclass (base class) is a general class.
+Subclass (derived class) is a specialized class.
+To indicate inheritance, the superclass name is placed in parentheses after
+sublass name. class Car(Automobile):
+The initializer method of a subclass calls the initializer method of a 
+superclass and then initializes the unique data attributes.
+
+### Polymorphism
+Polymorphism is an object's ability to take different forms. They are able to 
+define a method in a superclass and override it in a subclass and to call the
+correct version of overridden method depending on the type of object that 
+called for it.
+AttributeError exception is raised when a method is receiving an object which 
+is not an instance of the right class.
+isinstance function determines whether object is an instance of a class.
+isinstance(object, class)
+
+## GUI Programming
+User interface is the part of the computer with which the user interacts.
+Command line interface displays a prompt and the user types a command that is
+then executed.
+Graphical User Interface (GUI) allows users to interact with a program 
+through graphical elements on the screen.
+Dialog boxes are small windows that display information and allow the user to
+perform actions. They are responsible for most of the interaction through GUI.
+Users interact with graphical elements such as icons, buttons, and slider bars.
+GUI programs are event-driven, meaning the user determines the order in which
+things happen. So, the user causes events to take place and the program 
+responds to the events.
+tkinter module allows for the creation of simple GUI programs.
+A widget is a graphical element that the user can interact with or view. 
+Tkinter widgets include buttons, checkbutton, entry, menu, scale, etc.
+
+Frame widget is a container that holds other widgets. It is useful for 
+organizing and arranging groups of widgets in a window. The contained widgets
+are added to the frame widget which contains them.
+tkinter.Label(self.top_frame, text ='hi')
+
+Label widget displays a single line of text in a window.
+tkinter.Label(self.main_window, text = 'my text')
+StringVar class is a tkinter module class that can be used along with Label 
+widget to display data. Create StringVar object and then create Label widget
+and associate it with the StringVar object. Any value stored in the StringVar
+object will automatically be displayed in the Label widget.
+
+Button widget is a widget that the user can click to cause an action to take 
+place. Can specify text to appear on face of the button and callback function.
+Callback function is a function or method that executes when the user clicks
+the button, aka the event handler.
+
+Info dialog box is a dialog box that shows information to the user. Must import
+the tkinter.messagebox module. Then, tkinter.messagebox.showinfo(title, message)
+
+Quit button closes the program when the user clicks it. To create a quit button
+must create a button widget. Set the root widget's destroy method as the 
+callback function. When the user clicks the button the destroy method is called.
+
+Entry widget is a rectangular area that the user can type text into. It is used 
+to gather input in a GUI program and is typically followed by a button for 
+submitting the data. 
+
+Radio button is a small circle that appears filled when it is selected and 
+appears empty when it is deselected.
+Radiobutton widgets created using tkinter module's Radiobutton class. 
+IntVar class is a tkinter module class that can be used along with 
+Radiobutton widgets. Associate group of Radiobutton widgets with the same 
+IntVar object, Assign unique integer to each Radiobutton, When a Radiobutton
+widgets is selected, its unique integer is stored in the IntVar object.
+It can be used to select a default radio button.
+You can specify a callback function with Radiobutton widgets by providing
+an argument command=self.my_method when creating the Radiobutton widget.
+The command will execute immediately when the radio button is selected. It
+replaces the need for a user to click OK or submit before determining which
+Radiobutton is selected.
+
+Check button is a small box with a label appearing next to it. Users are 
+allowed to select any or all of the check buttons that are displayed in a
+group (not mutually exclusive). Checkbutton widgets created using tkinter
+module's Checkbutton class. Associate different IntVar object with each 
+Checkbutton widget.
+
+Canvas widget is a blank, rectangular area that allows you to draw single 2D 
+shapes. Use screen coordinate system to specify the location of graphics. 
+(0,0) is the top left. Create the main window using 
+self.main_window = tkinter.Tk(). Then create the Canvas widget using
+self.canvas = tkinger.Canvas(self.main_window, width=100, height=200)
+Numerous methods for drawinf shapes including create_line, create_rectangle,
+create_oval, create_arc, create_polygon, and create_text.
+
+pack method determines where a widget should be positioned and makes it 
+visible when the main window is displayed. It receives an argument to specify
+
 ## Serializing Objects
 
 Serializing an object converts an object to a stream of bytes that can be
