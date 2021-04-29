@@ -598,6 +598,8 @@ create_oval, create_arc, create_polygon, and create_text.
 pack method determines where a widget should be positioned and makes it 
 visible when the main window is displayed. It receives an argument to specify
 
+https://www.geeksforgeeks.org/python-tkinter-tutorial/#introduction
+
 ## Serializing Objects
 
 Serializing an object converts an object to a stream of bytes that can be

@@ -15,6 +15,7 @@ Put relevant files in certain categories to find relevant code later.
 - number_guessing_game.py: simulates number guessing game based on user input
 - potomac_nationals_if_elif.py: calculate ticket price based on user selection
 - potomac_nationals_sequential_ifs_debug.py: calculate ticket price based on user selection
+- retirement_debug.py: calculates employer's retirement contribution
 - rock_paper_scissors.py: allows user to play Rock, Paper, Scissors
 - sales_price.py: calculates sale price from discount
 - seconds_converter.py: converts input seconds to hours, minutes, seconds
@@ -29,6 +30,7 @@ Put relevant files in certain categories to find relevant code later.
 - birthdays.py: dictionary for storing birthdays
 - birthdays2.py: dictionary for storing birthdays using functions
 - cell_phone_list.py: creates 3 CellPhone objects and stores them in a list
+- gas_prices.py: calculate average gas price from a file dataset
 - groceries_list.py: creates and displays a grocery list based on user input
 - KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
 - multi_dimensional_list.py: Initializing a 2 dimensional list and filling it with random values
@@ -46,12 +48,15 @@ Put relevant files in certain categories to find relevant code later.
 - cups_to_ounces_debug.py: converts cups to fluid ounces
 - delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
 - groceries_list.py: creates and displays a grocery list based on user input
+- inventory.py: creates inventory class which helps us to track inventory
+- inventory_demo.py: tests Inventory class
 - population_changes_EC.py: calculates and displays pop. changes from data file
 - search_coffee_record.py: searches the coffee.txt file
 
 ## Exception Handling
 - add_coffee_record.py: adds coffee inventory records to a coffee.txt file
 - delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
+- gas_prices.py: calculate average gas price from a file dataset
 - groceries_list.py: creates and displays a grocery list based on user input
 - KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
 - payroll.py: process a payroll report and save the results to an output file
@@ -63,6 +68,7 @@ Put relevant files in certain categories to find relevant code later.
 ## Reading From or To a File
 - add_coffee_record.py: adds coffee inventory records to a coffee.txt file
 - delete_coffee_record.py: allows the user to delete a record in the coffee.txt file
+- gas_prices.py: calculate average gas price from a file dataset
 - groceries_list.py: creates and displays a grocery list based on user input
 - KaleyRegner_Programming_Assignment_2.py: reads in, prints, and saves specific car data
 - payroll.py: process a payroll report and save the results to an output file
@@ -73,6 +79,19 @@ Put relevant files in certain categories to find relevant code later.
 
 ## Object Oriented Programming
 - account_test.py: demonstrates the BankAccount class
+- bank_account.py: computes and displays the balance based on user input
 - bankaccount.py: BankAccount class simulates a bank object
+- cash_register.py: shows how inheritance works by inheriting from inventory
+- cash_register_demo.py: tests the inventory and cash_register.py classes
 - cell_phone_test.py: tests the CellPhone class
 - cellphone.py: class holds data about a cell phone
+- gross_margin.py: computes gross margin using input from gm_gui
+- inventory.py: creates inventory class which helps us to track inventory
+- inventory_demo.py: tests Inventory class
+
+## GUI Creation
+- account_test_gui.py: GUI that calculates balance
+- gross_margin_gui.py: GUI to calculate gross margin using gross_margin.py
+- kilo_converter_gui.py: GUI that converts kilometers to miles
+- kilo_converter_gui2.py: GUI that converts kilometers to miles, different format
+- property_taxes.py: GUI that calculates property taxes
