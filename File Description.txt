@@ -25,6 +25,7 @@ Put relevant files in certain categories to find relevant code later.
 - telephone_number.py: check to see if a telephone number entered by the user is formatted correctly
 - temperature.py: tracks temperatures over a number of days in lists
 - temperatures_2d.py: temperatures over a number of days in a two dimensional list
+- workdays_debug.py: demonstrates an array of String objects
 
 ## Data Structures
 - birthdays.py: dictionary for storing birthdays
@@ -88,6 +89,8 @@ Put relevant files in certain categories to find relevant code later.
 - gross_margin.py: computes gross margin using input from gm_gui
 - inventory.py: creates inventory class which helps us to track inventory
 - inventory_demo.py: tests Inventory class
+- conversions.py: class to get and set ounces
+- conversions_ounces_demo.py: converts ounces to grams using Conversions class
 
 ## GUI Creation
 - account_test_gui.py: GUI that calculates balance
