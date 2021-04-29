@@ -4,8 +4,8 @@ Created on Thu Apr 22 02:07:55 2021
 gross_margin.py
 @author: kales
 """
-# Accepts the user's input from the gm_gui.py file and computes the gross
-# margin in $ and gross margin % and displays it
+# Accepts the user's input from the gross_margin_gui.py file and computes the 
+# gross margin in $ and gross margin % and displays it
 
 # Create GrossMargin object
 class GrossMargin:

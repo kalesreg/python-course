@@ -4,7 +4,7 @@ Created on Tue Apr 20 11:26:02 2021
 inventory.py
 @author: kales
 """
-# Thise inventory class haleps us to track inventory
+# This inventory class helps us to track inventory
 
 class Inventory:
     # Default constructor/method to initialize our attributes/data members
