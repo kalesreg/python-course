@@ -25,6 +25,7 @@ Put relevant files in certain categories to find relevant code later.
 - telephone_number.py: check to see if a telephone number entered by the user is formatted correctly
 - temperature.py: tracks temperatures over a number of days in lists
 - temperatures_2d.py: temperatures over a number of days in a two dimensional list
+- voters_debug.py: displays voter numbers
 - workdays_debug.py: demonstrates an array of String objects
 
 ## Data Structures
@@ -91,6 +92,8 @@ Put relevant files in certain categories to find relevant code later.
 - inventory_demo.py: tests Inventory class
 - conversions.py: class to get and set ounces
 - conversions_ounces_demo.py: converts ounces to grams using Conversions class
+- conversions_hectares.py: class to get and set hectares
+- conversions_hectares_demo.py: converts hectares to acres using ConversionsHectares class
 
 ## GUI Creation
 - account_test_gui.py: GUI that calculates balance
